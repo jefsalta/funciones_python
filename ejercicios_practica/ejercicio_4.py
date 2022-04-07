@@ -9,12 +9,20 @@
 
 # Ejercicios con funciones
 
+def cantidad_invitados():
+    resultado = int(input("¿Cuántos invitados son?:"))
+    return resultado
 # --------------------------------
 # Aquí dentro definir la función que solicitará
 # el nombre de tres invitados
 # def generar_invitados():
 
-
+def generar_invitados(cantidad):
+    invitados = []
+    for i in range(cantidad):
+        persona = input("Ingrese el nombre del invitado: ")
+        invitados.append(persona)
+    return invitados
 # --------------------------------
 
 
@@ -31,7 +39,7 @@ if __name__ == '__main__':
 
     # Los tres nombres ingresados se deberán guardar en
     # una lista
-
+    invitados = cantidad_invitados()
     # La función generar_invitados deberá retornar
     # la lista de invitados generados
 
@@ -41,7 +49,9 @@ if __name__ == '__main__':
     # Luego de crear la función invocarla en este lugar:
 
     # lista_invitados = generar_invitados()
+    lista_invitados = generar_invitados(invitados)
 
     # Imprimir en pantalla "lista_invitados":
+    print(lista_invitados)
 
     print("terminamos")
